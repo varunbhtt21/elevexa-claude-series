@@ -83,4 +83,10 @@ Marketers, operations teams, teachers, content creators, founders, and anyone cu
 
 If this helped you, ⭐ star the repo and 🔔 subscribe on YouTube!
 
+### Follow Elevexa AI
+
+[![Website](https://img.shields.io/badge/Website-elevexaai.com-2E6BFF?style=for-the-badge&logo=googlechrome&logoColor=white)](https://www.elevexaai.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Elevexa_AI-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/company/elevexaai)
+[![Instagram](https://img.shields.io/badge/Instagram-@elevexaai-E8408F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/elevexaai/)
+
 </div>
