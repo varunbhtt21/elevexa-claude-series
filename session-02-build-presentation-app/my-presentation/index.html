@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Batman: The Dark Knight</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&family=Comic+Neue:wght@400;700&family=Creepster&family=Lora:wght@500;700&family=Rajdhani:wght@600;700&family=Rye&family=Special+Elite&family=Teko:wght@500;600&display=swap" rel="stylesheet">
+  <script>
+    // Apply the saved theme before first paint to avoid a flash
+    try { document.documentElement.dataset.theme = localStorage.getItem('batman-deck-theme') || 'classic'; } catch {}
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Reusable bat silhouette -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="bat" viewBox="0 0 100 50">
+      <path d="M50 14 L46 5 L44.5 13 C37 11 31 6 28 0 C22 10 11 13 0 10 C8 16 10 26 6 34 C14 30 22 32 26 40 C30 34 38 32 44 36 C46 40 48 44 50 49 C52 44 54 40 56 36 C62 32 70 34 74 40 C78 32 86 30 94 34 C90 26 92 16 100 10 C89 13 78 10 72 0 C69 6 63 11 55.5 13 L54 5 Z"/>
+    </symbol>
+  </svg>
+
+  <div class="progress"><span id="progressBar"></span></div>
+
+  <main class="viewport">
+    <div class="stage" id="stage">
+
+      <!-- 1. TITLE -->
+      <section class="slide s-title" aria-label="Title">
+        <div class="rays"></div>
+        <div class="signal anim" style="--i:0">
+          <div class="beam"></div>
+          <div class="signal-disc"><svg><use href="#bat"/></svg></div>
+        </div>
+        <div class="title-wrap">
+          <div class="issue anim" style="--i:1">Issue #1 · Since 1939 · 10¢</div>
+          <h1 class="mega" aria-label="Batman">
+            <span style="--i:0">B</span><span style="--i:1">A</span><span style="--i:2">T</span><span style="--i:3">M</span><span style="--i:4">A</span><span style="--i:5">N</span>
+          </h1>
+          <p class="tagline anim" style="--i:8">The Dark Knight of Gotham City!</p>
+        </div>
+        <div class="burst burst-red anim pop" style="--i:9; left:90px; bottom:110px">KAPOW!</div>
+        <p class="hint anim" style="--i:11">Press <kbd>→</kbd> to begin the adventure</p>
+      </section>
+
+      <!-- 2. QUICK FACTS -->
+      <section class="slide s-facts" aria-label="Quick facts">
+        <div class="caption anim" style="--i:0">Chapter 1</div>
+        <h2 class="headline anim" style="--i:1">Top Secret Case File!</h2>
+        <div class="facts">
+          <div class="fact anim" style="--i:2"><b>Real Name</b><span>Bruce Wayne</span></div>
+          <div class="fact anim" style="--i:3"><b>Created By</b><span>Bob Kane &amp; Bill Finger</span></div>
+          <div class="fact anim" style="--i:4"><b>First Seen</b><span><i>Detective Comics</i> #27 (May 1939)</span></div>
+          <div class="fact anim" style="--i:5"><b>Home Turf</b><span>Gotham City</span></div>
+          <div class="fact anim" style="--i:6"><b>Secret HQ</b><span>The Batcave, under Wayne Manor</span></div>
+          <div class="fact anim" style="--i:7"><b>Also Known As</b><span>Dark Knight · Caped Crusader · World's Greatest Detective</span></div>
+        </div>
+        <div class="stamp anim" style="--i:10">Superpowers:<br>NONE!</div>
+      </section>
+
+      <!-- 3. ORIGIN -->
+      <section class="slide s-origin" aria-label="Origin story">
+        <div class="caption anim" style="--i:0">Chapter 2</div>
+        <h2 class="headline anim" style="--i:1">How It All Began...</h2>
+        <div class="strip">
+          <article class="panel p1 anim" style="--i:2">
+            <div class="panel-cap">The Tragedy</div>
+            <div class="panel-art">🌧️</div>
+            <p>A robber takes the lives of young Bruce's parents, <b>Thomas &amp; Martha Wayne</b>, in a dark Gotham alley.</p>
+          </article>
+          <article class="panel p2 anim" style="--i:3">
+            <div class="panel-cap">The Vow</div>
+            <div class="panel-art">🕯️</div>
+            <p>That night, Bruce swears to fight the criminals who took his family away.</p>
+          </article>
+          <article class="panel p3 anim" style="--i:4">
+            <div class="panel-cap">The Training</div>
+            <div class="panel-art">🥋</div>
+            <p>Years of travel to master <b>martial arts</b>, <b>detective work</b> and <b>science</b>.</p>
+          </article>
+          <article class="panel p4 anim" style="--i:5">
+            <div class="panel-cap">The Symbol</div>
+            <div class="panel-art bat-art"><svg><use href="#bat"/></svg></div>
+            <p>A bat crashes through his window. Criminals fear the night. <b>He becomes Batman!</b></p>
+            <div class="bubble bubble-up anim pop" style="--i:8">I shall become a&nbsp;BAT!</div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 4. SKILLS -->
+      <section class="slide s-skills" aria-label="Skills">
+        <div class="caption anim" style="--i:0">Chapter 3</div>
+        <h2 class="headline anim" style="--i:1">No Powers? No Problem!</h2>
+        <div class="skills">
+          <div class="skill anim" style="--i:2">
+            <div class="skill-icon">🧠</div>
+            <div class="skill-body"><h3>Genius Intellect</h3><p>Solves crimes with observation &amp; logic</p>
+              <div class="meter" style="--v:100%"><span></span></div></div>
+          </div>
+          <div class="skill anim" style="--i:3">
+            <div class="skill-icon">🥋</div>
+            <div class="skill-body"><h3>Combat Master</h3><p>Expert in many martial arts</p>
+              <div class="meter" style="--v:96%"><span></span></div></div>
+          </div>
+          <div class="skill anim" style="--i:4">
+            <div class="skill-icon">🏃</div>
+            <div class="skill-body"><h3>Peak Athlete</h3><p>As fit as a human can possibly be</p>
+              <div class="meter" style="--v:92%"><span></span></div></div>
+          </div>
+          <div class="skill anim" style="--i:5">
+            <div class="skill-icon">🎭</div>
+            <div class="skill-body"><h3>Master of Disguise</h3><p>Nobody suspects the billionaire</p>
+              <div class="meter" style="--v:88%"><span></span></div></div>
+          </div>
+        </div>
+        <div class="burst burst-yellow anim pop" style="--i:9; right:70px; top:60px">100%<br>HUMAN!</div>
+      </section>
+
+      <!-- 5. GADGETS -->
+      <section class="slide s-gadgets" aria-label="Equipment">
+        <div class="caption anim" style="--i:0">Chapter 4</div>
+        <h2 class="headline anim" style="--i:1">Holy Gadgets, Batman!</h2>
+        <div class="belt anim" style="--i:2"><div class="buckle"><svg><use href="#bat"/></svg></div></div>
+        <div class="pouches">
+          <div class="pouch anim" style="--i:3"><div class="pouch-icon">🛡️</div><h3>Batsuit</h3><p>Armor that hides him in the shadows</p></div>
+          <div class="pouch anim" style="--i:4"><div class="pouch-icon">🧰</div><h3>Utility Belt</h3><p>Batarangs, grapple hooks &amp; smoke pellets</p></div>
+          <div class="pouch anim" style="--i:5"><div class="pouch-icon">🏎️</div><h3>Batmobile</h3><p>A super-fast armored car. Vroom!</p></div>
+          <div class="pouch anim" style="--i:6"><div class="pouch-icon">🦇</div><h3>Batcave</h3><p>Secret base packed with computers</p></div>
+        </div>
+      </section>
+
+      <!-- 6. ALLIES -->
+      <section class="slide s-allies" aria-label="Allies">
+        <div class="caption anim" style="--i:0">Chapter 5</div>
+        <h2 class="headline anim" style="--i:1">The Bat-Family Assembles!</h2>
+        <div class="allies">
+          <div class="ally anim" style="--i:2">
+            <div class="bubble">Shall I prepare the Batmobile, sir?</div>
+            <div class="avatar a1">🎩</div><h3>Alfred Pennyworth</h3><p>Loyal butler who raised Bruce</p>
+          </div>
+          <div class="ally anim" style="--i:3">
+            <div class="bubble">Light up the signal!</div>
+            <div class="avatar a2">👮</div><h3>Commissioner Gordon</h3><p>Trusted partner in the police</p>
+          </div>
+          <div class="ally anim" style="--i:4">
+            <div class="bubble">Holy sidekicks, Batman!</div>
+            <div class="avatar a3">🐦</div><h3>Robin</h3><p>Young sidekick since 1940, first Dick Grayson</p>
+          </div>
+          <div class="ally anim" style="--i:5">
+            <div class="bubble">We've got your back!</div>
+            <div class="avatar a4">⚡</div><h3>Batgirl &amp; Nightwing</h3><p>Heroes of the Bat-Family</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. VILLAINS -->
+      <section class="slide s-villains" aria-label="Villains">
+        <div class="caption anim" style="--i:0">Chapter 6</div>
+        <h2 class="headline anim" style="--i:1">Gotham's Most Wanted!</h2>
+        <div class="posters">
+          <div class="poster anim" style="--i:2"><div class="wanted">Wanted</div><div class="mug">🃏</div><h3>The Joker</h3><p>Chaotic clown, enemy No. 1</p></div>
+          <div class="poster anim" style="--i:3"><div class="wanted">Wanted</div><div class="mug">🐱</div><h3>Catwoman</h3><p>Clever thief… sometimes a friend</p></div>
+          <div class="poster anim" style="--i:4"><div class="wanted">Wanted</div><div class="mug">🐧</div><h3>The Penguin</h3><p>Powerful crime boss</p></div>
+          <div class="poster anim" style="--i:5"><div class="wanted">Wanted</div><div class="mug">❓</div><h3>The Riddler</h3><p>Leaves puzzles at crime scenes</p></div>
+          <div class="poster anim" style="--i:6"><div class="wanted">Wanted</div><div class="mug">🪙</div><h3>Two-Face</h3><p>Ex-lawyer with a split personality</p></div>
+          <div class="poster anim" style="--i:7"><div class="wanted">Wanted</div><div class="mug">💪</div><h3>Bane</h3><p>Brains <i>and</i> brawn</p></div>
+        </div>
+      </section>
+
+      <!-- 8. POP CULTURE -->
+      <section class="slide s-timeline" aria-label="Batman in popular culture">
+        <div class="caption anim" style="--i:0">Chapter 7</div>
+        <h2 class="headline anim" style="--i:1">Lights! Camera! Batman!</h2>
+        <div class="timeline">
+          <div class="line"></div>
+          <div class="event up anim" style="--i:2"><div class="year">1966</div><div class="card"><h3>Batman (TV)</h3><p>Bright, silly &amp; full of <b>POW!</b> Starring Adam West.</p></div></div>
+          <div class="event down anim" style="--i:3"><div class="year">1989</div><div class="card"><h3>Batman</h3><p>Tim Burton goes dark with Michael Keaton.</p></div></div>
+          <div class="event up anim" style="--i:4"><div class="year">1992</div><div class="card"><h3>The Animated Series</h3><p>One of the best cartoons ever made.</p></div></div>
+          <div class="event down anim" style="--i:5"><div class="year">2005</div><div class="card"><h3>Dark Knight Trilogy</h3><p>Christopher Nolan gets real. Heath Ledger wins an Oscar!</p></div></div>
+          <div class="event up anim" style="--i:6"><div class="year">2022</div><div class="card"><h3>The Batman</h3><p>Robert Pattinson plays a detective-first hero.</p></div></div>
+        </div>
+      </section>
+
+      <!-- 9. CONCLUSION -->
+      <section class="slide s-moral" aria-label="Conclusion">
+        <div class="rays rays-light"></div>
+        <div class="moral">
+          <div class="signal signal-big anim" style="--i:0">
+            <div class="signal-disc"><svg><use href="#bat"/></svg></div>
+          </div>
+          <div class="moral-text">
+            <div class="caption anim" style="--i:1">The Moral of the Story</div>
+            <div class="bubble bubble-big anim pop" style="--i:2">Batman endures because he is <em>HUMAN!</em></div>
+            <p class="moral-sub anim" style="--i:4">He turned tragedy into a lifelong mission to protect others.</p>
+            <div class="key anim" style="--i:6">💡 Courage + Discipline + Brains = <b>A Real Hero</b></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. THE END -->
+      <section class="slide s-end" aria-label="The end">
+        <div class="rays"></div>
+        <div class="flock" aria-hidden="true">
+          <svg style="--d:0s; --y:18%; --s:1"><use href="#bat"/></svg>
+          <svg style="--d:1.2s; --y:62%; --s:.6"><use href="#bat"/></svg>
+          <svg style="--d:2.4s; --y:35%; --s:.8"><use href="#bat"/></svg>
+          <svg style="--d:3.4s; --y:78%; --s:.5"><use href="#bat"/></svg>
+          <svg style="--d:4.6s; --y:8%; --s:.7"><use href="#bat"/></svg>
+        </div>
+        <h2 class="the-end anim" style="--i:0">The End<span>...?</span></h2>
+        <div class="burst burst-cyan anim pop" style="--i:3; left:50%; bottom:110px; margin-left:-170px">Questions?</div>
+        <p class="hint anim" style="--i:5">Same Bat-Time, same Bat-Channel!</p>
+      </section>
+
+      <!-- 11. BONUS GAME (logic in game.js) -->
+      <section class="slide s-game" aria-label="Bat-Dash game">
+        <canvas class="game-canvas" width="1600" height="900" aria-label="Bat-Dash game screen"></canvas>
+        <div class="game-overlay">
+          <div class="game-card bump">
+            <p class="game-kicker">Bonus Round!</p>
+            <h2 class="game-title">Bat-Dash</h2>
+            <p class="game-sub">A rooftop rumble across Gotham City</p>
+            <ul class="game-keys">
+              <li><kbd>Space</kbd> <kbd>↑</kbd> Jump. Tap again in the air to double-jump.</li>
+              <li><b>Hold</b> <kbd>Space</kbd> Spread the cape and glide over gaps</li>
+              <li><kbd>↓</kbd> Dive down fast. Land on henchmen for a POW!</li>
+              <li><kbd>X</kbd> Throw a Batarang</li>
+              <li><kbd>P</kbd> Pause · <kbd>M</kbd> Mute · <kbd>←</kbd> <kbd>→</kbd> Change slide</li>
+            </ul>
+            <p class="game-tip">🦇 Grab Bat-tokens · 🤡 Dodge the laughing gas · ❤️ 3 lives</p>
+            <p class="game-cta">Press <kbd>Space</kbd> to start!</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <nav class="controls" aria-label="Slide controls">
+    <button class="btn" id="prev" aria-label="Previous slide">◀</button>
+    <span class="counter" id="counter">01 / 10</span>
+    <button class="btn" id="next" aria-label="Next slide">▶</button>
+    <button class="btn btn-small" id="fs" aria-label="Toggle fullscreen" title="Fullscreen (F)">⛶</button>
+    <button class="btn btn-theme" id="themeBtn" aria-label="Choose theme" aria-haspopup="true" aria-expanded="false" title="Theme (T)">🎨</button>
+    <span class="divider" aria-hidden="true"></span>
+    <button class="pill" id="editBtn" title="Edit slides (E)">✏️ Edit</button>
+    <button class="pill pill-save" id="saveBtn" title="Save changes (⌘/Ctrl + S)" hidden>💾 Save</button>
+    <button class="pill pill-ghost" id="cancelBtn" title="Discard changes" hidden>Cancel</button>
+    <button class="pill pill-ghost" id="resetBtn" title="Restore the original content" hidden>↺ Reset</button>
+  </nav>
+
+  <div class="theme-menu" id="themeMenu" role="menu" aria-label="Themes">
+    <h4>Pick your universe</h4>
+  </div>
+
+  <div class="sidebar-hotzone" id="hotzone" aria-hidden="true"></div>
+  <button class="sidebar-tab" id="sidebarTab" title="Slides (S)">☰ Slides</button>
+  <aside class="sidebar" id="sidebar" aria-label="Slide organiser">
+    <div class="sidebar-head">
+      <b>Slides</b>
+      <button class="pin" id="pinBtn" aria-pressed="false" title="Keep the sidebar open">📌</button>
+    </div>
+    <p class="sidebar-hint">Drag a card onto another to swap them. Toggle “Skip” to leave a slide out.</p>
+    <ol class="slide-list" id="slideList"></ol>
+  </aside>
+
+  <div class="edit-banner" role="status">
+    ✏️ <b>Edit mode:</b> click any text to change it · <kbd>Enter</kbd> finish · <kbd>Shift</kbd>+<kbd>Enter</kbd> new line · <kbd>⌘/Ctrl</kbd>+<kbd>S</kbd> save
+  </div>
+
+  <script src="game.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
